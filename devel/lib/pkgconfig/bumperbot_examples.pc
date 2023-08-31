@@ -1,0 +1,8 @@
+prefix=/home/kowshik/Desktop/bumperbot_ws/devel
+
+Name: bumperbot_examples
+Description: Description of bumperbot_examples
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
