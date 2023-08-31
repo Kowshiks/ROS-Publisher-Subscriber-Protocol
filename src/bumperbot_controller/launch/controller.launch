@@ -1,0 +1,13 @@
+<launch>
+
+    <rosparam file="$(find bumperbot_controller)/config/simple_controller.yaml" command="load"/>
+
+    <rosparam file="$(find joint_state_controller)/joint_state_controller.yaml" command="load"/>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"
+        respawn="false" output="screen"/>
+
+    <node pkg="controller_manager" type="spawner" name="controller_manager"
+        respawn="false" output="screen" args="wheel_left_controller wheel_right_controller joint_state_controller"/>
+
+</launch>

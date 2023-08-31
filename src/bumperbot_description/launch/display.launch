@@ -1,0 +1,11 @@
+<launch>
+
+    <args name="model" default="$(find bumperbot_description)/urdf/bumperbot.urdf.xacro"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)"/>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+    <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find bumperbot_description)/rviz/display.rviz"/>
+
+</launch>
