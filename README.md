@@ -46,6 +46,8 @@ Whenever a new message is published on a topic, the RViz subscriber receives it
 
 ROS Parameter Server to store variables. command “rosparam list” is used to list all the params. “rosparam get <name>” is used to get the value. To store a new parameter we use “rosporam set <name> <value>”
 
+![Answer box frame length](/img/rviz.png)
+
 ### To visualise the URDF robot model in RViz
 
 First we need to load the URDF model in the parameter server so that it can be retrieved by RViz for visualization.
@@ -85,6 +87,8 @@ Physics Engine to simulate movement and forces applied on the robot. Rviz intera
 <collision> tag is used in the urdf file for the Gazebo interecation. This basically indicates the volume of the parts.
 
 <inertial> is used to add the inertia of the body. This basically contains the inertial matrix
+
+![Answer box frame length](/img/Gazebo_first.png)
 
 ### Control
 
