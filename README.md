@@ -1,14 +1,14 @@
-# Steps to create Parameter Server, Nodes and topic through Publisher-Subscriber protocol to make the robot move in Gazebo
+# Steps to create Parameter Server, Nodes and Topic through Publisher-Subscriber protocol to make the Robot move in Gazebo
 
 
-### Basic Publisher Subscriber
+## Basic Publisher Subscriber
 
 Publisher Subscriber communication protocol to publish new message in ROS Topic.
 Created a topic called chatter. Messages are published in the chatter topic.
 Subscriber node is created to listen to all the messages that the publisher publishes and create event for each message.
 ROS Master is started using the roscore command
 
-### Locomotion - URDF
+## Locomotion - URDF
 
 We will be focussing on Differential locomotion where there are 2 wheels acting independently with different motors.
 ROS uses URDF - Unified Robot Description Format to structure the Robot through XML tags
@@ -34,7 +34,7 @@ A joint contains a parent and a child link.
 
 In the wheel joint the type is continuous because the wheel can freely rotate along the axis of the base joint.
 
-### RViz
+## RViz
 
 RViz - ROS Visualization and these are graphical interface that allows us to visualize the content of the ROS messages that are published in different topics.
 
@@ -48,7 +48,9 @@ ROS Parameter Server to store variables. command “rosparam list” is used to 
 
 ![Answer box frame length](/img/rviz.png)
 
-### To visualise the URDF robot model in RViz
+
+
+## To visualise the URDF robot model in RViz
 
 First we need to load the URDF model in the parameter server so that it can be retrieved by RViz for visualization.
 
@@ -68,7 +70,7 @@ TF shows all the links → RobotModel visualizes the URDF model of the robot
 
 To allow the movement of all the non fixed joint of the robot (wheels) we need to start another node of the package joint_state_publisher_gui → after this the wheels will be correctly displayed.
 
-### ROS launch files to make things simpler
+## ROS launch files to make things simpler
 
 Launch files are basically xml files that contains a list of operations
 
@@ -80,7 +82,7 @@ roslaunch command is used to launch all the applications listed in the xml file
 
 <include> executes the launch files
 
-### Gazebo
+## Gazebo
 
 Physics Engine to simulate movement and forces applied on the robot. Rviz interacts with the data from Gazebo which simulates sensor datas and other information of the robot.
 
@@ -90,7 +92,9 @@ Physics Engine to simulate movement and forces applied on the robot. Rviz intera
 
 ![Answer box frame length](/img/Gazebo_first.png)
 
-### Control
+
+
+## Control
 
 For controller library called ROS Controller is used
 
