@@ -96,7 +96,7 @@ Physics Engine to simulate movement and forces applied on the robot. Rviz intera
 
 ## Control
 
-For controller library called ROS Controller is used
+For controller, the library called ROS Controller is used.
 
 To activate the moving joint of the robot.
 
